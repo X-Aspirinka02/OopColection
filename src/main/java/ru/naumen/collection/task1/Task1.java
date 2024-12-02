@@ -1,5 +1,8 @@
 package ru.naumen.collection.task1;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Дано:
  * <pre>
@@ -38,12 +41,13 @@ public class Task1
          */
         FOOD_AND_DRINKS
     }
-
+    // оздаём map, хранящий связь билета с услугой
+    Map<Ticket, Goods> services = new HashMap<>();
     /**
      * Получить товары по билету
      */
     public Goods getGoods(Ticket ticket) {
-        // TODO реализовать
-        return null;
+        return services.get(ticket);
+        // средняя сложность O(1)
     }
 }
