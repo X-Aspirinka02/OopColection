@@ -37,7 +37,7 @@ public class Task2
         //Используем HashSet для быстрого поиска
         Set<User> setB = new HashSet<>(collB); // создание O(m) m - длинна B
 
-        List<User> duplicates = new LinkedList<>(); // добавление элемента за O(1)
+        List<User> duplicates = new ArrayList<>(); // добавление элемента за O(1)
         for (User user : collA) { // цикл O(n) n - длинна A
             if (setB.contains(user)) { //проверяем за O(1) за счет переопределенных методов сравнения объектов
                 duplicates.add(user);
